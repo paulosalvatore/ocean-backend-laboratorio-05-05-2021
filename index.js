@@ -15,7 +15,7 @@ const mensagens = ['Essa é a primeira mensagem!', 'Essa é a segunda mensagem!'
 
 // GET: READ ALL (exibir todos os registros)
 app.get('/mensagens', (req, res) => {
-  res.send(mensagens);
+  res.send(mensagens.filter(Boolean));
 });
 
 // GET: READ SINGLE (exibir apenas um registro)
