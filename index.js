@@ -29,6 +29,9 @@ app.get('/mensagens/:id', (req, res) => {
 });
 
 // POST: CREATE (criar um registro)
+app.post('/mensagens', (req, res) => {
+  res.send('Criar uma mensagem.');
+});
 
 // PUT: UPDATE (editar um registro)
 
