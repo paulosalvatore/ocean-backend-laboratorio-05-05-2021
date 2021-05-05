@@ -54,5 +54,12 @@ app.put('/mensagens/:id', (req, res) => {
 });
 
 // DELETE: DELETE (remover um registro)
+app.delete('/mensagens/:id', (req, res) => {
+  const id = req.params.id - 1;
+
+  delete mensagens[id];
+
+  res.send('Mensagem removida com sucesso.');
+});
 
 app.listen(3000);
