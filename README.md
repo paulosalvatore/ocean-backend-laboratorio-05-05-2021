@@ -51,8 +51,8 @@ https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibn
   - É como se eu quebrasse o backend em várias aplicações.
   - Arquitetura de microsserviços
 - **REST:** comunicação via protocolo HTTP utilizando alguns verbos
-  - **Verbos (ou Methods):** CREATE, GET, PUT, DELETE, ...
-  - **CREATE:** criar registros
+  - **Verbos (ou Methods):** POST, GET, PUT, DELETE, ...
+  - **POST:** criar registros
   - **GET:** ler registros
   - **PUT:** atualizar registros
   - **DELETE:** remover registros
