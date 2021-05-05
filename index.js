@@ -21,6 +21,10 @@ app.get('/mensagens/:id', function (req, res) {
 
   const mensagem = mensagens[id];
 
+  if (!mensagem) {
+    res.send('Mensagem não encontrada.');
+  }
+
   res.send(mensagem);
 });
 
