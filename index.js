@@ -6,6 +6,7 @@ app.get('/hello', function (req, res) {
 });
 
 const mensagens = ['Essa é a primeira mensagem!', 'Essa é a segunda mensagem!'];
+//                  0                              1
 
 // CRUD (Create, Read, Update, Delete)
 
@@ -15,6 +16,13 @@ app.get('/mensagens', function (req, res) {
 });
 
 // GET: READ SINGLE (exibir apenas um registro)
+app.get('/mensagens/:id', function (req, res) {
+  const id = req.params.id - 1;
+
+  const mensagem = mensagens[id];
+
+  res.send(mensagem);
+});
 
 // POST: CREATE (criar um registro)
 
