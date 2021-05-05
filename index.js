@@ -11,12 +11,12 @@ const mensagens = ['Essa é a primeira mensagem!', 'Essa é a segunda mensagem!'
 // CRUD (Create, Read, Update, Delete)
 
 // GET: READ ALL (exibir todos os registros)
-app.get('/mensagens', function (req, res) {
+app.get('/mensagens', (req, res) => {
   res.send(mensagens);
 });
 
 // GET: READ SINGLE (exibir apenas um registro)
-app.get('/mensagens/:id', function (req, res) {
+app.get('/mensagens/:id', (req, res) => {
   const id = req.params.id - 1;
 
   const mensagem = mensagens[id];
