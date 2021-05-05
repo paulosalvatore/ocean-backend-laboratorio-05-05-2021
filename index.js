@@ -1,5 +1,9 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const app = express();
+
+app.use(bodyParser.json());
 
 app.get('/hello', function (req, res) {
   res.send('Hello World');
@@ -30,6 +34,8 @@ app.get('/mensagens/:id', (req, res) => {
 
 // POST: CREATE (criar um registro)
 app.post('/mensagens', (req, res) => {
+  console.log(req.body);
+
   res.send('Criar uma mensagem.');
 });
 
