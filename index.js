@@ -34,9 +34,13 @@ app.get('/mensagens/:id', (req, res) => {
 
 // POST: CREATE (criar um registro)
 app.post('/mensagens', (req, res) => {
-  console.log(req.body);
+  const mensagem = req.body.mensagem;
 
-  res.send('Criar uma mensagem.');
+  mensagens.push(mensagem);
+
+  const id = mensagens.length;
+
+  res.send(`Mensagem '${id}' criada com sucesso.`);
 });
 
 // PUT: UPDATE (editar um registro)
